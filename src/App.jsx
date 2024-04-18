@@ -25,16 +25,18 @@ const App = () => {
 
   console.log(infoArray);
 
-  return (  
+  return (
     <div>
       <Título nombre={nombre} edad={edad} />
       <input
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <button onClick={handleSubmit}>Info Julian</button>
-      <button onClick={InfoJulian}>Info Julian</button>
-      <button onClick={InfoSantiago}>Info Santiago</button>
+      <div className="botones" style={{ display: "grid" }}>
+        <button onClick={handleSubmit}>Info Julian</button>
+        <button onClick={InfoJulian}>Info Julian</button>
+        <button onClick={InfoSantiago}>Info Santiago</button>
+      </div>
       <ul>
         {infoArray.map((item, index) => (
           <li key={index}>{item}</li>
